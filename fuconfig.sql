@@ -1640,7 +1640,7 @@ USE `fuconfig`;
 
 USE `asteriskrealtime`;
 
-DROP USER IF EXISTS 'asteriskuser'
+DROP USER IF EXISTS 'asteriskuser';
 CREATE USER 'asteriskuser'@'%' IDENTIFIED BY 'asteriskBlah111';
 GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'asteriskuser'@'%';
 FLUSH PRIVILEGES;
