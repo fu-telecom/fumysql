@@ -1634,6 +1634,11 @@ UNLOCK TABLES;
 
 USE `fuconfig`;
 
+DROP USER IF EXISTS 'fuconfig';
+CREATE USER 'fuconfig'@'%' IDENTIFIED BY 'fuconfig';
+GRANT ALL PRIVILEGES ON fuconfig.* TO 'fuconfig'@'%';
+GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'fuconfig'@'%';
+FLUSH PRIVILEGES;
 --
 -- Current Database: `asteriskrealtime`
 --
@@ -1642,6 +1647,7 @@ USE `asteriskrealtime`;
 
 DROP USER IF EXISTS 'asteriskuser';
 CREATE USER 'asteriskuser'@'%' IDENTIFIED BY 'asteriskBlah111';
+GRANT ALL PRIVILEGES ON fuconfig.* TO 'fuconfig'@'%';
 GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'asteriskuser'@'%';
 FLUSH PRIVILEGES;
 
