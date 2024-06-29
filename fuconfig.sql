@@ -1652,6 +1652,7 @@ GRANT ALL PRIVILEGES ON fuconfig.* TO 'fuconfig'@'%';
 GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'asteriskuser'@'%';
 FLUSH PRIVILEGES;
 
+CREATE DATABASE `bookstack`;
 USE `bookstack`;
 
 DROP USER IF EXISTS 'bookstack';
@@ -1659,7 +1660,7 @@ CREATE USER 'bookstack'@'%' IDENTIFIED BY 'futconfig';
 GRANT ALL PRIVILEGES ON bookstack.* TO 'bookstack'@'%';
 FLUSH PRIVILEGES;
 
-CREATE DATABASE `bookstack`;
+
 --
 --
 -- Final view structure for view `sccpdeviceconfig`
