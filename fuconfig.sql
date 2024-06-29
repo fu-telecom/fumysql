@@ -19,7 +19,7 @@
 -- Current Database: `fuconfig`
 --
 
-CREATE DATABASE `bookstack`
+CREATE DATABASE `bookstack`;
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `fuconfig` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 USE `fuconfig`;
