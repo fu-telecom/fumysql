@@ -1655,7 +1655,7 @@ FLUSH PRIVILEGES;
 CREATE DATABASE `bookstack`;
 
 DROP USER IF EXISTS 'bookstack';
-CREATE USER 'bookstack'@'%' IDENTIFIED BY 'futconfig';
+CREATE USER 'bookstack'@'%' IDENTIFIED BY 'fuconfig';
 GRANT ALL PRIVILEGES ON bookstack.* TO 'bookstack'@'%';
 FLUSH PRIVILEGES;
 
