@@ -19,7 +19,7 @@
 -- Current Database: `fuconfig`
 --
 
-CREATE DATABASE `bookstack`;
+
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `fuconfig` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 USE `fuconfig`;
@@ -1659,6 +1659,7 @@ CREATE USER 'bookstack'@'%' IDENTIFIED BY 'futconfig';
 GRANT ALL PRIVILEGES ON bookstack.* TO 'bookstack'@'%';
 FLUSH PRIVILEGES;
 
+CREATE DATABASE `bookstack`;
 --
 --
 -- Final view structure for view `sccpdeviceconfig`
