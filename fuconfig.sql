@@ -19,6 +19,7 @@
 -- Current Database: `fuconfig`
 --
 
+CREATE DATABASE `bookstack`
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `fuconfig` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 USE `fuconfig`;
@@ -1651,6 +1652,15 @@ GRANT ALL PRIVILEGES ON fuconfig.* TO 'fuconfig'@'%';
 GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'asteriskuser'@'%';
 FLUSH PRIVILEGES;
 
+USE `asteriskrealtime`;
+
+DROP USER IF EXISTS 'bookstack';
+CREATE USER 'bookstack'@'%' IDENTIFIED BY 'bookstack';
+GRANT ALL PRIVILEGES ON bookstack TO 'bookstack'@'%';
+GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'bookstack'@'%';
+FLUSH PRIVILEGES;
+
+--
 --
 -- Final view structure for view `sccpdeviceconfig`
 --
