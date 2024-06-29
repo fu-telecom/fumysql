@@ -1656,8 +1656,7 @@ USE `asteriskrealtime`;
 
 DROP USER IF EXISTS 'bookstack';
 CREATE USER 'bookstack'@'%' IDENTIFIED BY 'futuser';
-GRANT ALL PRIVILEGES ON bookstack TO 'bookstack'@'%';
-GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'bookstack'@'%';
+GRANT ALL PRIVILEGES ON bookstack.* TO 'bookstack'@'%';
 FLUSH PRIVILEGES;
 
 --
