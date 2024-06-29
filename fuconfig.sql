@@ -1653,7 +1653,6 @@ GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'asteriskuser'@'%';
 FLUSH PRIVILEGES;
 
 CREATE DATABASE `bookstack`;
-USE `bookstack`;
 
 DROP USER IF EXISTS 'bookstack';
 CREATE USER 'bookstack'@'%' IDENTIFIED BY 'futconfig';
