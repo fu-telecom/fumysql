@@ -2893,12 +2893,18 @@ UNLOCK TABLES;
 -- Current Database: `fuconfig`
 --
 
+DROP USER IF EXISTS 'bookstack';
+CREATE USER 'bookstack'@'%' IDENTIFIED BY 'fuconfig';
+GRANT ALL PRIVILEGES ON bookstack.* TO 'bookstack'@'%';
+FLUSH PRIVILEGES;
+
 USE `fuconfig`;
 
 DROP USER IF EXISTS 'fuconfig';
 CREATE USER 'fuconfig'@'%' IDENTIFIED BY 'fuconfig';
 GRANT ALL PRIVILEGES ON fuconfig.* TO 'fuconfig'@'%';
 GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'fuconfig'@'%';
+GRANT ALL PRIVILEGES ON bookstack.* TO 'fuconfig'@'%';
 FLUSH PRIVILEGES;
 --
 -- Current Database: `asteriskrealtime`
@@ -2910,9 +2916,6 @@ DROP USER IF EXISTS 'asteriskuser';
 CREATE USER 'asteriskuser'@'%' IDENTIFIED BY 'asteriskBlah111';
 GRANT ALL PRIVILEGES ON fuconfig.* TO 'fuconfig'@'%';
 GRANT ALL PRIVILEGES ON asteriskrealtime.* TO 'asteriskuser'@'%';
+GRANT ALL PRIVILEGES ON bookstack.* TO 'fuconfig'@'%';
 FLUSH PRIVILEGES;
 
-DROP USER IF EXISTS 'bookstack';
-CREATE USER 'bookstack'@'%' IDENTIFIED BY 'fuconfig';
-GRANT ALL PRIVILEGES ON bookstack.* TO 'bookstack'@'%';
-FLUSH PRIVILEGES;
