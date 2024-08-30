@@ -2913,6 +2913,15 @@ FLUSH PRIVILEGES;
 
 USE `asteriskrealtime`;
 
+ALTER TABLE sippeers ADD COLUMN name VARCHAR(40);
+ALTER TABLE sippeers ADD COLUMN host VARCHAR(40);
+ALTER TABLE sippeers ADD COLUMN nat VARCHAR(5);
+ALTER TABLE sippeers ADD COLUMN type VARCHAR(10);
+ALTER TABLE sippeers ADD COLUMN context VARCHAR(40);
+ALTER TABLE sippeers ADD COLUMN caninvite ENUM('yes','no');
+ALTER TABLE sippeers ADD COLUMN callcounter ENUM('yes','no');
+ALTER TABLE sippeers ADD COLUMN directrtpsetup ENUM('yes','no');
+
 DROP USER IF EXISTS 'asteriskuser';
 CREATE USER 'asteriskuser'@'%' IDENTIFIED BY 'asteriskBlah111';
 GRANT ALL PRIVILEGES ON fuconfig.* TO 'fuconfig'@'%';
